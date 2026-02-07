@@ -99,6 +99,32 @@ export const siteConfig = {
       ],
     },
   ],
+  practiceAreas: [
+    {
+      name: "Derecho Penal",
+      description: "Defensa y patrocinio en procesos penales ordinarios, flagrancia y alta complejidad",
+    },
+    {
+      name: "Derecho Penal Económico",
+      description: "Delitos económicos, financieros y patrimoniales. Fraude corporativo y lavado de activos",
+    },
+    {
+      name: "Compliance Penal",
+      description: "Programas de cumplimiento normativo, prevención de riesgos penales empresariales",
+    },
+    {
+      name: "Litigación Oral",
+      description: "Representación en audiencias, juicios orales y recursos ante todas las instancias",
+    },
+    {
+      name: "Consultoría Corporativa",
+      description: "Asesoría preventiva a empresas sobre contingencias y responsabilidad penal",
+    },
+    {
+      name: "Arbitraje",
+      description: "Resolución alternativa de controversias en materia penal y comercial",
+    },
+  ],
   education: [
     {
       school: "Pontificia Universidad Católica del Perú (PUCP)",

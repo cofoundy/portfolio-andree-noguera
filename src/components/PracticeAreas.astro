@@ -3,37 +3,87 @@ import { siteConfig } from "../config";
 const hasPracticeAreas = siteConfig.practiceAreas && siteConfig.practiceAreas.length > 0;
 ---
 
-{
-  hasPracticeAreas && (
-    <section id="practice" class="p-8 sm:p-12 md:p-16 lg:p-24 reveal">
-      <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
-              Áreas de Práctica
-            </h2>
-            <div
-              class="w-[75px] h-[5px] mt-2 rounded-full"
-              style={`background-color: ${siteConfig.accentColor}`}
-            />
-          </div>
+{hasPracticeAreas && (
+  <!-- Shimmer separator -->
+  <div class="w-full h-2 bar-shimmer"></div>
 
-          <div class="lg:col-span-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {siteConfig.practiceAreas.map((area) => (
-                <div class="bg-white rounded-lg border border-gray-100 p-5 hover:shadow-md transition-all duration-300 hover:border-gray-200">
-                  <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                    {area.name}
-                  </h3>
-                  <p class="text-sm text-gray-600 leading-relaxed">
-                    {area.description}
-                  </p>
-                </div>
-              ))}
+  <section
+    id="practice"
+    class="py-16 md:py-20"
+    style={`background-color: white`}
+  >
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center mb-14 reveal">
+        <h2
+          class="text-3xl md:text-4xl font-bold mb-4"
+          style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Raleway', sans-serif;`}
+        >
+          Áreas de Práctica
+        </h2>
+        <div
+          class="w-20 h-1.5 mx-auto rounded-full"
+          style={`background-color: ${siteConfig.colors.accent}`}
+        ></div>
+      </div>
+
+      <!-- Numbered List -->
+      <div class="max-w-3xl mx-auto space-y-0">
+        {siteConfig.practiceAreas.map((area, index) => (
+          <div
+            class={`reveal stagger-${Math.min(index + 1, 6)} group py-6 ${index < siteConfig.practiceAreas.length - 1 ? 'border-b' : ''}`}
+            style={index < siteConfig.practiceAreas.length - 1 ? `border-color: ${siteConfig.colors.primaryDark}12` : ''}
+          >
+            <div class="flex items-start gap-6">
+              <!-- Number -->
+              <span
+                class="flex-shrink-0 text-3xl md:text-4xl font-bold leading-none"
+                style={`color: ${siteConfig.colors.accent}; font-family: 'Playfair Display', serif;`}
+              >
+                {String(index + 1).padStart(2, '0')}
+              </span>
+
+              <!-- Content -->
+              <div class="flex-1 min-w-0">
+                <h3
+                  class="text-lg md:text-xl font-semibold mb-1 group-hover:translate-x-1 transition-transform duration-200"
+                  style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Raleway', sans-serif;`}
+                >
+                  {area.name}
+                </h3>
+                <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                  {area.description}
+                </p>
+              </div>
+
+              <!-- Arrow (hover) -->
+              <svg
+                class="w-5 h-5 flex-shrink-0 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                style={`color: ${siteConfig.colors.accent}`}
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
             </div>
           </div>
-        </div>
+        ))}
       </div>
-    </section>
-  )
-}
+
+      <!-- CTA -->
+      <div class="text-center mt-12 reveal stagger-6">
+        <a
+          href={`mailto:${siteConfig.social?.email}?subject=Consulta sobre servicios legales`}
+          class="btn-hover inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg"
+          style={`background-color: ${siteConfig.colors.primaryDark}; color: ${siteConfig.colors.accent}`}
+        >
+          Cuéntame tu caso
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+)}

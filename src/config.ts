@@ -1,14 +1,35 @@
 export const siteConfig = {
   name: "Andrée Noguera Patiño",
   title: "Abogado Penalista | Litigante | Maestrista PUCP",
-  description: "Portfolio de Andrée Noguera Patiño - Abogado Penalista con experiencia en litigación penal, derecho penal económico y consultoría legal en Lima, Perú",
-  accentColor: "#2d4a7a",
+  description:
+    "Portfolio de Andrée Noguera Patiño - Abogado Penalista con experiencia en litigación penal, derecho penal económico y consultoría legal en Lima, Perú",
+  // Brand color palette - Midnight Brass
+  accentColor: "#c9a96e",
+  colors: {
+    primaryDark: "#1a1a2e", // Deep midnight (headings, nav, hero bg)
+    primary: "#16213e", // Dark navy (text, cards)
+    primaryLight: "#0f3460", // Medium navy (hover, accents)
+    accent: "#c9a96e", // Brass/gold (CTAs, highlights)
+    surface: "#f5f3ef", // Warm parchment (section bg)
+    surfaceLight: "#faf9f6", // Near-white warm (alt bg)
+  },
+  tagline:
+    "Defiendo a personas y empresas en los procesos penales más complejos del país.",
+  stats: [
+    { value: "8+", label: "Años de experiencia" },
+    { value: "PUCP", label: "Maestría en Derecho Penal" },
+    { value: "Fexlaw", label: "Ecuador + Perú" },
+  ],
   social: {
     email: "anoguera.pe@gmail.com",
     linkedin: "https://www.linkedin.com/in/nogueraandree",
   },
   aboutMe:
     "Abogado Penalista con amplia experiencia en litigación oral y escrita, especializado en derecho penal y penal económico. Ex funcionario del Ministerio Público y la Corte Suprema de Justicia, con estudios de maestría en Derecho Penal por la PUCP. Fundador de NOPRA Abogados y actualmente Abogado Asociado en Fexlaw, firma líder en Ecuador en litigio penal empresarial y compliance. Comprometido con la excelencia en la defensa legal y la formación de nuevos profesionales del derecho.",
+  quote: {
+    text: "La defensa penal no es solo un derecho, es la última línea entre la justicia y la arbitrariedad.",
+    author: "Andrée Noguera",
+  },
   skills: [
     "Derecho Penal",
     "Derecho Procesal Penal",
@@ -19,6 +40,38 @@ export const siteConfig = {
     "Arbitraje",
     "Investigación Fiscal",
     "Derecho Constitucional",
+  ],
+  practiceAreas: [
+    {
+      name: "Derecho Penal",
+      description:
+        "Defensa y patrocinio en procesos penales ordinarios, flagrancia y alta complejidad",
+    },
+    {
+      name: "Derecho Penal Económico",
+      description:
+        "Delitos económicos, financieros y patrimoniales. Fraude corporativo y lavado de activos",
+    },
+    {
+      name: "Compliance Penal",
+      description:
+        "Programas de cumplimiento normativo, prevención de riesgos penales empresariales",
+    },
+    {
+      name: "Litigación Oral",
+      description:
+        "Representación en audiencias, juicios orales y recursos ante todas las instancias",
+    },
+    {
+      name: "Consultoría Corporativa",
+      description:
+        "Asesoría preventiva a empresas sobre contingencias y responsabilidad penal",
+    },
+    {
+      name: "Arbitraje",
+      description:
+        "Resolución alternativa de controversias en materia penal y comercial",
+    },
   ],
   projects: [
     {
@@ -99,32 +152,6 @@ export const siteConfig = {
       ],
     },
   ],
-  practiceAreas: [
-    {
-      name: "Derecho Penal",
-      description: "Defensa y patrocinio en procesos penales ordinarios, flagrancia y alta complejidad",
-    },
-    {
-      name: "Derecho Penal Económico",
-      description: "Delitos económicos, financieros y patrimoniales. Fraude corporativo y lavado de activos",
-    },
-    {
-      name: "Compliance Penal",
-      description: "Programas de cumplimiento normativo, prevención de riesgos penales empresariales",
-    },
-    {
-      name: "Litigación Oral",
-      description: "Representación en audiencias, juicios orales y recursos ante todas las instancias",
-    },
-    {
-      name: "Consultoría Corporativa",
-      description: "Asesoría preventiva a empresas sobre contingencias y responsabilidad penal",
-    },
-    {
-      name: "Arbitraje",
-      description: "Resolución alternativa de controversias en materia penal y comercial",
-    },
-  ],
   education: [
     {
       school: "Pontificia Universidad Católica del Perú (PUCP)",
@@ -139,9 +166,14 @@ export const siteConfig = {
       school: "Universidad Peruana de Ciencias Aplicadas (UPC)",
       degree: "Título Profesional de Abogado",
       dateRange: "2010 - 2016",
-      achievements: [
-        "Titulado en Derecho",
-      ],
+      achievements: ["Titulado en Derecho"],
     },
   ],
+  cta: {
+    title: "¿Necesitas un abogado penalista?",
+    description:
+      "Si enfrentas un proceso penal o necesitas asesoría preventiva para tu empresa, conversemos. La primera consulta es sin compromiso.",
+    buttonText: "Agenda una consulta",
+    emailSubject: "Consulta Penal",
+  },
 };

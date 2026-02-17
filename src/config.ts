@@ -3,15 +3,15 @@ export const siteConfig = {
   title: "Abogado Penalista | Litigante | Maestrista PUCP",
   description:
     "Portfolio de Andrée Noguera Patiño - Abogado Penalista con experiencia en litigación penal, derecho penal económico y consultoría legal en Lima, Perú",
-  // Brand color palette - Midnight Brass
-  accentColor: "#c9a96e",
+  // Brand color palette - Elegant Teal (inspired by Isabella Monteiro)
+  accentColor: "#d4af37",
   colors: {
-    primaryDark: "#1a1a2e", // Deep midnight (headings, nav, hero bg)
-    primary: "#16213e", // Dark navy (text, cards)
-    primaryLight: "#0f3460", // Medium navy (hover, accents)
-    accent: "#c9a96e", // Brass/gold (CTAs, highlights)
-    surface: "#f5f3ef", // Warm parchment (section bg)
-    surfaceLight: "#faf9f6", // Near-white warm (alt bg)
+    primaryDark: "#0d2626", // Deep teal dark (headings, nav, hero bg)
+    primary: "#1a3d3d", // Rich teal (main sections, cards)
+    primaryLight: "#2d5555", // Medium teal (hover, accents)
+    accent: "#d4af37", // Elegant gold (CTAs, highlights)
+    surface: "#f8f6f3", // Warm cream (section bg)
+    surfaceLight: "#fdfcfa", // Near-white warm (alt bg)
   },
   tagline:
     "Defiendo a personas y empresas en los procesos penales más complejos del país.",

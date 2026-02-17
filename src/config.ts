@@ -3,15 +3,16 @@ export const siteConfig = {
   title: "Abogado Penalista | Litigante | Maestrista PUCP",
   description:
     "Portfolio de Andrée Noguera Patiño - Abogado Penalista con experiencia en litigación penal, derecho penal económico y consultoría legal en Lima, Perú",
-  // Brand color palette - Elegant Teal (inspired by Isabella Monteiro)
-  accentColor: "#d4af37",
+  // Brand color palette - Isabella Monteiro exact colors
+  accentColor: "#f4d03f",
   colors: {
-    primaryDark: "#0d2626", // Deep teal dark (headings, nav, hero bg)
-    primary: "#1a3d3d", // Rich teal (main sections, cards)
-    primaryLight: "#2d5555", // Medium teal (hover, accents)
-    accent: "#d4af37", // Elegant gold (CTAs, highlights)
-    surface: "#f8f6f3", // Warm cream (section bg)
-    surfaceLight: "#fdfcfa", // Near-white warm (alt bg)
+    primaryDark: "#0d2626", // Deep teal (main background)
+    primary: "#1a4444", // Medium teal (cards background)
+    primaryLight: "#2d5555", // Light teal (hover states)
+    accent: "#f4d03f", // Bright elegant gold
+    accentDark: "#d4af37", // Darker gold for text
+    surface: "#1f4f4f", // Card surface teal
+    surfaceLight: "#f8f6f3", // Off-white for text sections
   },
   tagline:
     "Defiendo a personas y empresas en los procesos penales más complejos del país.",
@@ -23,6 +24,8 @@ export const siteConfig = {
   social: {
     email: "anoguera.pe@gmail.com",
     linkedin: "https://www.linkedin.com/in/nogueraandree",
+    whatsapp: "+51976811379",
+    phone: "+51 976 811 379",
   },
   aboutMe:
     "Abogado Penalista con amplia experiencia en litigación oral y escrita, especializado en derecho penal y penal económico. Ex funcionario del Ministerio Público y la Corte Suprema de Justicia, con estudios de maestría en Derecho Penal por la PUCP. Fundador de NOPRA Abogados y actualmente Abogado Asociado en Fexlaw, firma líder en Ecuador en litigio penal empresarial y compliance. Comprometido con la excelencia en la defensa legal y la formación de nuevos profesionales del derecho.",

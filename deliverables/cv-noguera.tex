@@ -1,0 +1,150 @@
+% Harvard-Format Professional CV — Andrée Emanuel Noguera Patiño
+% Compile with: xelatex cv-noguera.tex
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=0.6in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+% --- Fonts (macOS system fonts) ---
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica Neue}
+
+% --- Colors ---
+\definecolor{headrule}{HTML}{2c3e50}
+\definecolor{linkblue}{HTML}{1a5276}
+
+% --- Hyperlinks ---
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue, pdfborder={0 0 0}}
+
+% --- Section Formatting (Harvard style) ---
+\titleformat{\section}
+  {\large\bfseries\centering}
+  {}
+  {0em}
+  {\vspace{-0.4em}\hrulefill\quad}[\quad\hrulefill\vspace{-0.4em}]
+\titlespacing{\section}{0pt}{0.6em}{0.3em}
+
+% --- List Formatting ---
+\setlist[itemize]{nosep, left=0pt, label=\textbullet, itemsep=1pt, topsep=2pt}
+
+% --- No page numbers ---
+\pagestyle{empty}
+
+% --- Custom Commands ---
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1} \hfill #2 \par\nopagebreak
+  \textit{#3} \hfill \textit{#4} \par\nopagebreak
+}
+
+\begin{document}
+
+% ============================================
+% HEADER
+% ============================================
+\begin{center}
+  {\LARGE\bfseries Andr\'{e}e Emanuel Noguera Pati\~{n}o} \\[4pt]
+  \faIcon{map-marker-alt}\enspace Lima, Per\'{u}
+  \quad\faIcon{envelope}\enspace \href{mailto:anoguera.pe@gmail.com}{anoguera.pe@gmail.com}
+  \\[2pt]
+  \faIcon{linkedin}\enspace \href{https://www.linkedin.com/in/nogueraandree}{linkedin.com/in/nogueraandree}
+\end{center}
+
+\vspace{-0.4em}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{-0.8em}
+
+% ============================================
+% EDUCACI\'{O}N
+% ============================================
+\section{Educaci\'{o}n}
+
+\entry{Pontificia Universidad Cat\'{o}lica del Per\'{u} (PUCP)}{Lima, Per\'{u}}{Maestr\'{i}a en Derecho Penal (estudios concluidos)}{2020 -- 2021}
+\begin{itemize}
+  \item Desarroll\'{o} tesis sobre el delito de colusi\'{o}n y la calificaci\'{o}n jur\'{i}dica del extraneus, proponiendo una modificaci\'{o}n al sistema vigente de autor\'{i}a y participaci\'{o}n en el derecho penal peruano
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Universidad Peruana de Ciencias Aplicadas (UPC)}{Lima, Per\'{u}}{T\'{i}tulo Profesional de Abogado}{2010 -- 2016}
+\vspace{0.3em}
+
+% ============================================
+% EXPERIENCIA PROFESIONAL
+% ============================================
+\section{Experiencia Profesional}
+
+\entry{Fexlaw Abogados (Ecuador)}{Lima, Per\'{u} / Quito, Ecuador}{Abogado Asociado -- \'{A}rea Penal en Per\'{u}}{Oct 2024 -- Presente}
+\begin{itemize}
+  \item Representa a personas naturales y jur\'{i}dicas en procesos penales de alta complejidad para firma l\'{i}der en Ecuador en litigio penal empresarial, compliance y fraude
+  \item Gestiona estrategias de defensa penal en jurisdicci\'{o}n binacional (Per\'{u}--Ecuador), ampliando la cobertura de la firma en el mercado peruano
+  \item Asesora a clientes corporativos en materia de prevenci\'{o}n de riesgos penales y programas de cumplimiento normativo
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Estudio Silva \& Abogados}{Lima, Per\'{u}}{Abogado Penalista}{Oct 2024 -- Feb 2025}
+\begin{itemize}
+  \item Elabor\'{o} denuncias, recursos impugnatorios y remedios procesales, optimizando los tiempos de respuesta procesal del estudio
+  \item Coordin\'{o} diligencias ante la Polic\'{i}a Nacional, el Ministerio P\'{u}blico y el Poder Judicial a nivel nacional, gestionando m\'{u}ltiples casos simult\'{a}neamente
+  \item Brind\'{o} consultor\'{i}a especializada sobre responsabilidad y contingencias penales a personas naturales y jur\'{i}dicas
+\end{itemize}
+\vspace{0.3em}
+
+\entry{NOPRA Abogados}{Lima, Per\'{u}}{Gerente General y Director del \'{A}rea Penal}{Ene 2023 -- Oct 2024}
+\begin{itemize}
+  \item Fund\'{o} y dirigi\'{o} estudio de abogados especializado en materia penal, laboral y constitucional, liderando la totalidad de procesos penales del despacho
+  \item Dise\~{n}\'{o} estrategias procesales para casos de derecho penal econ\'{o}mico, logrando resultados favorables en procesos de alta complejidad
+  \item Elabor\'{o} informes jur\'{i}dicos y consultor\'{i}as sobre responsabilidad penal corporativa para clientes del sector empresarial
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Corte Suprema de Justicia de la Rep\'{u}blica}{Lima, Per\'{u}}{Secretario de Confianza}{Oct 2021 -- Dic 2022}
+\begin{itemize}
+  \item Resolvi\'{o} Recursos de Nulidad y Casaciones en la m\'{a}xima instancia judicial del Per\'{u}, analizando expedientes de elevada complejidad jur\'{i}dica
+  \item Destacado a despacho para resolver los casos de mayor trascendencia, contribuyendo a la formaci\'{o}n de jurisprudencia vinculante
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Pati\~{n}o L\'{o}pez Abogados \& Asociados}{Lima, Per\'{u}}{Abogado Penalista}{Feb 2021 -- Oct 2021}
+\begin{itemize}
+  \item Patrocin\'{o} casos penales de trascendencia jur\'{i}dica, incluyendo delitos econ\'{o}micos, financieros y patrimoniales
+  \item Investig\'{o} y estructur\'{o} estrategias de defensa en materia de delitos econ\'{o}micos, atendiendo a clientes personas naturales y jur\'{i}dicas
+  \item Asesor\'{o} a empresas en la identificaci\'{o}n y eliminaci\'{o}n de contingencias penales, reduciendo la exposici\'{o}n a riesgos legales
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Ministerio P\'{u}blico -- Fiscal\'{i}a de la Naci\'{o}n}{Lima, Per\'{u}}{Asistente en Funci\'{o}n Fiscal}{Feb 2017 -- Ene 2021}
+\begin{itemize}
+  \item Elabor\'{o} resoluciones de Archivo y Formalizaci\'{o}n de denuncia, as\'{i} como dict\'{a}menes de acusaci\'{o}n, durante 4 a\~{n}os de servicio en el Ministerio P\'{u}blico
+  \item Coordin\'{o} diligencias de investigaci\'{o}n con la PNP, Medicina Legal y diversas instituciones p\'{u}blicas a nivel nacional
+  \item Elabor\'{o} incoaciones de proceso inmediato en casos de flagrancia, contribuyendo a la celeridad de la administraci\'{o}n de justicia
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% DOCENCIA Y ACTIVIDADES
+% ============================================
+\section{Docencia y Actividades}
+
+\entry{Academia C\'{o}digo 17}{Lima, Per\'{u}}{Docente del \'{A}rea Penal}{}
+\begin{itemize}
+  \item Imparti\'{o} formaci\'{o}n en derecho penal a aspirantes a abogados, transmitiendo conocimiento pr\'{a}ctico en litigaci\'{o}n oral y procesal penal
+  \item Desarroll\'{o} material did\'{a}ctico especializado en derecho penal y procesal penal para la preparaci\'{o}n de futuros profesionales del derecho
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% HABILIDADES Y ADICIONAL
+% ============================================
+\section{Habilidades y Especializaciones}
+
+\noindent\textbf{Especialidades:} Derecho Penal, Derecho Procesal Penal, Derecho Penal Econ\'{o}mico, Litigaci\'{o}n Oral, Compliance Penal, Arbitraje \\[3pt]
+\noindent\textbf{Consultor\'{i}a:} Asesor\'{i}a Legal Corporativa, Prevenci\'{o}n de Riesgos Penales, Contingencias Penales, Derecho Constitucional \\[3pt]
+\noindent\textbf{Idiomas:} Espa\~{n}ol (nativo)
+
+\end{document}

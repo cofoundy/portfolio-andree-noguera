@@ -77,14 +77,22 @@ const c = siteConfig.colors;
         </h3>
 
         <!-- About text paragraphs -->
-        {siteConfig.aboutMe.split('\n\n').map((paragraph) => (
-          <p
-            class="text-sm md:text-base leading-[1.8] mb-5"
-            style={`color: ${c.text}; font-family: 'Montserrat', sans-serif;`}
-          >
-            {paragraph}
-          </p>
-        ))}
+        <p
+          class="text-sm md:text-base leading-[1.8] mb-5"
+          style={`color: ${c.text}; font-family: 'Montserrat', sans-serif;`}
+          set:html={`Soy Andrée Noguera Patiño, abogado especializado en <strong style="color:${c.textHeading}">Derecho Penal</strong>, comprometido con la defensa ética, estratégica y eficaz para mis clientes. Con más de <strong style="color:${c.textHeading}">8 años de experiencia</strong> en litigación penal y procesal penal, he desempeñado roles clave en el <strong style="color:${c.textHeading}">Ministerio Público</strong>, la <strong style="color:${c.textHeading}">Corte Suprema de Justicia</strong> y reconocidos estudios de abogados.`}
+        />
+        <p
+          class="text-sm md:text-base leading-[1.8] mb-5"
+          style={`color: ${c.text}; font-family: 'Montserrat', sans-serif;`}
+          set:html={`Mi formación jurídica en la <strong style="color:${c.textHeading}">PUCP</strong> y mi experiencia en procesos complejos me permiten abordar cada caso con rigor y dedicación. Actualmente soy Abogado Asociado en <strong style="color:${c.textHeading}">Albertini Abogados</strong> y asociado externo en el área penal de <strong style="color:${c.textHeading}">Fexlaw</strong>, firma líder en Ecuador en litigio penal empresarial y compliance.`}
+        />
+        <p
+          class="text-sm md:text-base leading-[1.8] mb-5"
+          style={`color: ${c.text}; font-family: 'Montserrat', sans-serif;`}
+        >
+          Mis objetivos van más allá de obtener resultados positivos: busco también proporcionar seguridad y tranquilidad para quien confía en mí.
+        </p>
 
         <!-- Quote -->
         {siteConfig.quote && (

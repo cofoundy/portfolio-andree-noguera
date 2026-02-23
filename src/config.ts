@@ -22,7 +22,7 @@ export const siteConfig = {
   stats: [
     { value: "8+", label: "Años de experiencia" },
     { value: "PUCP", label: "Maestría en Derecho Penal" },
-    { value: "Fexlaw", label: "Ecuador + Perú" },
+    { value: "2 Firmas", label: "Albertini + Fexlaw" },
   ],
   social: {
     email: "anoguera.pe@gmail.com",
@@ -31,7 +31,7 @@ export const siteConfig = {
     phone: "+51 976 811 379",
   },
   aboutMe:
-    "Soy Andrée Noguera Patiño, abogado especializado en Derecho Penal, comprometido con la defensa ética, estratégica y eficaz para mis clientes. Con más de 8 años de experiencia en litigación penal y procesal penal, he desempeñado roles clave en el Ministerio Público, la Corte Suprema de Justicia y reconocidos estudios de abogados.\n\nMi formación jurídica en la PUCP y mi experiencia en procesos complejos me permiten abordar cada caso con rigor y dedicación. Fundé NOPRA Abogados y actualmente ejerzo como Abogado Asociado en Fexlaw, firma líder en Ecuador en litigio penal empresarial y compliance.\n\nMis objetivos van más allá de obtener resultados positivos: busco también proporcionar seguridad y tranquilidad para quien confía en mí.",
+    "Soy Andrée Noguera Patiño, abogado especializado en Derecho Penal, comprometido con la defensa ética, estratégica y eficaz para mis clientes. Con más de 8 años de experiencia en litigación penal y procesal penal, he desempeñado roles clave en el Ministerio Público, la Corte Suprema de Justicia y reconocidos estudios de abogados.\n\nMi formación jurídica en la PUCP y mi experiencia en procesos complejos me permiten abordar cada caso con rigor y dedicación. Actualmente soy Abogado Asociado en Albertini Abogados y asociado externo en el área penal de Fexlaw, firma líder en Ecuador en litigio penal empresarial y compliance.\n\nMis objetivos van más allá de obtener resultados positivos: busco también proporcionar seguridad y tranquilidad para quien confía en mí.",
   quote: {
     text: "La defensa penal no es solo un derecho, es la última línea entre la justicia y la arbitrariedad.",
     author: "Andrée Noguera",
@@ -55,8 +55,15 @@ export const siteConfig = {
   ],
   experience: [
     {
-      company: "Fexlaw Abogados (Ecuador)",
-      title: "Abogado Asociado - Área Penal",
+      company: "Albertini Abogados",
+      title: "Abogado Asociado",
+      dateRange: "2025 - Presente",
+      highlight:
+        "Patrocinio y asesoría en materia penal en reconocido estudio de abogados en Lima.",
+    },
+    {
+      company: "Fexlaw (Ecuador)",
+      title: "Asociado Externo - Área Penal",
       dateRange: "Oct 2024 - Presente",
       highlight:
         "Patrocinio en materia penal para firma líder en Ecuador en litigio penal empresarial, compliance y fraude.",

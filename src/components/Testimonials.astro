@@ -1,0 +1,67 @@
+---
+import { siteConfig } from "../config";
+const c = siteConfig.colors;
+---
+
+<section
+  id="testimonials"
+  class="py-20 md:py-28"
+  style={`background-color: ${c.bgAlt}`}
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16 reveal">
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-[0.08em] uppercase"
+        style={`color: ${c.textHeading}; font-family: 'Playfair Display', serif;`}
+      >
+        Depoimentos
+      </h2>
+      <div class="w-16 h-[2px] mx-auto mt-6" style={`background: ${c.accent}`}></div>
+    </div>
+
+    <!-- 2x3 Testimonial Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {siteConfig.testimonials.map((t) => (
+        <div
+          class="testimonial-card reveal rounded-xl p-6"
+          style={`background: ${c.card}; border: 1px solid ${c.cardBorder};`}
+        >
+          <!-- Quote -->
+          <p
+            class="text-sm leading-[1.8] mb-6 italic"
+            style={`color: ${c.text}; font-family: 'Montserrat', sans-serif;`}
+          >
+            &ldquo;{t.quote}&rdquo;
+          </p>
+
+          <!-- Attribution -->
+          <div
+            class="pt-4 flex items-center gap-3"
+            style={`border-top: 1px solid ${c.cardBorder};`}
+          >
+            <div>
+              <p class="text-sm font-bold" style={`color: ${c.textHeading}`}>
+                &mdash;{t.name}
+              </p>
+              <p class="text-xs mt-0.5" style={`color: ${c.accent}`}>
+                {t.role}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonial-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(30, 196, 168, 0.08);
+  }
+</style>

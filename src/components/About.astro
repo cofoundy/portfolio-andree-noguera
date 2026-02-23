@@ -1,76 +1,111 @@
 ---
 import { siteConfig } from "../config";
+const c = siteConfig.colors;
 ---
 
 <section
   id="about"
-  class="py-12 md:py-16"
-  style={`background-color: ${siteConfig.colors.surface}`}
+  class="relative py-20 md:py-28 overflow-hidden"
+  style={`background-color: ${c.bg}`}
 >
   <div class="max-w-6xl mx-auto px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-      <!-- Title Column -->
-      <div class="lg:col-span-3 reveal-left">
-        <h2
-          class="text-3xl md:text-4xl font-bold"
-          style={`color: ${siteConfig.colors.primaryDark}`}
+    <!-- Section title for reference -->
+    <h2
+      class="text-2xl sm:text-3xl md:text-4xl font-bold mb-14 text-center md:text-left"
+      style={`color: ${c.textHeading}; font-family: 'Playfair Display', serif;`}
+    >
+      {siteConfig.name}
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+      <!-- Vertical Text (desktop) -->
+      <div class="hidden lg:flex lg:col-span-1 items-start justify-center pt-4">
+        <span
+          class="text-[11px] font-bold tracking-[0.5em] uppercase"
+          style={`color: ${c.accent}; font-family: 'Raleway', sans-serif; writing-mode: vertical-lr; transform: rotate(180deg);`}
         >
-          Sobre Mí
-        </h2>
-        <div
-          class="w-16 h-1 mt-3 rounded-full"
-          style={`background-color: ${siteConfig.colors.accent}`}
-        ></div>
+          Qui&eacute;n Soy
+        </span>
       </div>
 
-      <!-- Content Column -->
-      <div class="lg:col-span-5 reveal stagger-1">
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          {siteConfig.aboutMe}
-        </p>
+      <!-- Photo Column (left on desktop) -->
+      <div class="lg:col-span-5 reveal-left order-2 lg:order-1">
+        <div class="relative max-w-[420px] mx-auto lg:mx-0">
+          <!-- Decorative offset frame -->
+          <div
+            class="absolute top-3 left-3 right-[-10px] bottom-[-10px] rounded-xl"
+            style={`border: 2px solid ${c.accent}30;`}
+          ></div>
+          <!-- Decorative horizontal bars -->
+          <div
+            class="absolute -right-6 top-[20%] w-12 h-[2px]"
+            style={`background: ${c.accent}60;`}
+          ></div>
+          <div
+            class="absolute -right-4 top-[22%] w-8 h-[2px]"
+            style={`background: ${c.gold}40;`}
+          ></div>
+          <div
+            class="absolute -right-6 bottom-[30%] w-12 h-[2px]"
+            style={`background: ${c.accent}60;`}
+          ></div>
+          <picture>
+            <source srcset="/profile.webp" type="image/webp" />
+            <img
+              src="/profile.jpg"
+              alt={siteConfig.name}
+              class="relative w-full aspect-[3/4] object-cover object-top rounded-xl shadow-2xl"
+              loading="lazy"
+            />
+          </picture>
+          <!-- Bottom gradient overlay -->
+          <div
+            class="absolute bottom-0 left-0 right-0 h-1/4 rounded-b-xl"
+            style={`background: linear-gradient(to top, ${c.bg}dd, transparent);`}
+          ></div>
+        </div>
       </div>
 
-      <!-- Quote Column -->
-      {siteConfig.quote && (
-        <div class="lg:col-span-4 reveal-scale stagger-2">
+      <!-- Text Content (right on desktop) -->
+      <div class="lg:col-span-6 reveal-right order-1 lg:order-2">
+        <!-- Mobile heading -->
+        <h3
+          class="lg:hidden text-xl font-bold mb-6 uppercase tracking-[0.1em]"
+          style={`color: ${c.accent}; font-family: 'Raleway', sans-serif;`}
+        >
+          Qui&eacute;n Soy
+        </h3>
+
+        <!-- About text paragraphs -->
+        {siteConfig.aboutMe.split('\n\n').map((paragraph) => (
+          <p
+            class="text-sm md:text-base leading-[1.8] mb-5"
+            style={`color: ${c.text}; font-family: 'Montserrat', sans-serif;`}
+          >
+            {paragraph}
+          </p>
+        ))}
+
+        <!-- Quote -->
+        {siteConfig.quote && (
           <blockquote
-            class="quote-float relative p-6 rounded-xl"
-            style={`background-color: ${siteConfig.colors.accent}15; border-left: 4px solid ${siteConfig.colors.accent}`}
+            class="mt-8 pl-5 py-3"
+            style={`border-left: 3px solid ${c.accent};`}
           >
             <p
-              class="text-lg md:text-xl font-medium italic"
-              style={`color: ${siteConfig.colors.primaryDark}; font-family: 'Playfair Display', serif;`}
+              class="text-base md:text-lg italic leading-relaxed"
+              style={`color: ${c.accent}; font-family: 'Playfair Display', serif;`}
             >
-              "{siteConfig.quote.text}"
+              &ldquo;{siteConfig.quote.text}&rdquo;
             </p>
-            <footer class="mt-3 text-sm" style={`color: ${siteConfig.colors.primary}`}>
-              — {siteConfig.quote.author}
+            <footer
+              class="mt-3 text-xs font-semibold uppercase tracking-wider"
+              style={`color: ${c.textMuted};`}
+            >
+              &mdash; {siteConfig.quote.author}
             </footer>
           </blockquote>
-        </div>
-      )}
-    </div>
-
-    <!-- Skills -->
-    <div
-      class="mt-10 pt-8 border-t reveal stagger-3"
-      style={`border-color: ${siteConfig.colors.primaryDark}15`}
-    >
-      <h3
-        class="text-sm font-semibold uppercase tracking-wider mb-4"
-        style={`color: ${siteConfig.colors.primaryDark}`}
-      >
-        Especialidades
-      </h3>
-      <div class="flex flex-wrap gap-2">
-        {siteConfig.skills.map((skill, index) => (
-          <span
-            class={`skill-hover px-4 py-2 rounded-full text-sm font-medium cursor-default stagger-${Math.min(index % 6 + 1, 6)}`}
-            style={`background-color: white; color: ${siteConfig.colors.primaryDark}; border: 1px solid ${siteConfig.colors.primaryDark}30`}
-          >
-            {skill}
-          </span>
-        ))}
+        )}
       </div>
     </div>
   </div>

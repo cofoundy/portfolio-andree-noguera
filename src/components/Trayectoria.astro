@@ -1,0 +1,74 @@
+---
+import { siteConfig } from "../config";
+const c = siteConfig.colors;
+---
+
+<section
+  id="trayectoria"
+  class="py-20 md:py-28"
+  style={`background-color: ${c.bgAlt}`}
+>
+  <div class="max-w-6xl mx-auto px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16 reveal">
+      <h2
+        class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide uppercase"
+        style={`color: ${c.textHeading}; font-family: 'Playfair Display', serif; letter-spacing: 0.08em;`}
+      >
+        Trayectoria
+      </h2>
+      <div
+        class="w-20 h-0.5 mx-auto mt-6"
+        style={`background-color: ${c.accent}`}
+      ></div>
+    </div>
+
+    <!-- Experience Cards Grid (2x3 like reference testimonials) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {siteConfig.experience.map((exp, index) => (
+        <div
+          class="tray-card reveal rounded-2xl p-6"
+          style={`
+            background: ${c.card};
+            border: 1px solid ${c.cardBorder};
+            transition: all 0.4s ease;
+          `}
+        >
+          <!-- Quote-style highlight -->
+          <p
+            class="text-sm leading-relaxed mb-6 italic"
+            style={`color: ${c.text}; font-family: 'Montserrat', sans-serif;`}
+          >
+            "{exp.highlight}"
+          </p>
+
+          <!-- Author-style attribution -->
+          <div
+            class="pt-4"
+            style={`border-top: 1px solid ${c.cardBorder}`}
+          >
+            <p
+              class="text-sm font-bold"
+              style={`color: ${c.textHeading}`}
+            >
+              —{exp.title}
+            </p>
+            <p
+              class="text-xs mt-1"
+              style={`color: ${c.accent}`}
+            >
+              {exp.company} &bull; {exp.dateRange}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .tray-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(29, 185, 160, 0.1);
+  }
+</style>

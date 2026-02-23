@@ -3,9 +3,8 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import PracticeAreas from "../components/PracticeAreas.astro";
 import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
-import Experience from "../components/Experience.astro";
-import Education from "../components/Education.astro";
+import Testimonials from "../components/Testimonials.astro";
+import FAQ from "../components/FAQ.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
@@ -14,31 +13,32 @@ import "../styles/global.css";
 <html lang="es">
   <head>
     <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={siteConfig.description} />
+    <meta name="theme-color" content={siteConfig.colors.bg} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>{siteConfig.name} - {siteConfig.title}</title>
+    <title>{siteConfig.name} — {siteConfig.title}</title>
   </head>
-  <body>
+  <body style={`background-color: ${siteConfig.colors.bg}; color: ${siteConfig.colors.text}; overflow-x: hidden;`}>
     <Header />
     <main>
       <Hero />
       <PracticeAreas />
       <About />
-      <Projects />
-      <Experience />
-      <Education />
+      <Testimonials />
+      <FAQ />
     </main>
     <Footer />
 
-    <!-- Scroll Reveal Animation Script -->
+    <!-- Scroll Reveal -->
     <script>
       const observerOptions = {
         root: null,

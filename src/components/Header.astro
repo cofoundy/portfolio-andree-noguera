@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+const c = siteConfig.colors;
 ---
 
 <!-- Floating Pill Nav -->
@@ -8,59 +9,39 @@ import { siteConfig } from "../config";
   class="floating-header fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden"
 >
   <nav
-    class="flex items-center gap-1 px-2 py-2 rounded-full shadow-lg backdrop-blur-md"
-    style={`background-color: ${siteConfig.colors.primaryDark}e6; border: 1px solid ${siteConfig.colors.accent}30`}
+    class="flex items-center gap-1 px-2 py-2 rounded-full shadow-xl backdrop-blur-md"
+    style={`background-color: ${c.bg}e6; border: 1px solid ${c.cardBorder};`}
   >
-    <a
-      href="#hero"
-      class="px-4 py-2 rounded-full text-sm font-medium transition-colors"
-      style={`color: ${siteConfig.colors.surface}`}
-    >
+    <a href="#hero" class="nav-link px-3 py-1.5 rounded-full text-xs font-medium" style={`color: ${c.text}`}>
       Inicio
     </a>
-    <a
-      href="#practice"
-      class="px-4 py-2 rounded-full text-sm font-medium transition-colors"
-      style={`color: ${siteConfig.colors.surface}`}
-    >
-      Áreas
+    <a href="#practice" class="nav-link px-3 py-1.5 rounded-full text-xs font-medium" style={`color: ${c.text}`}>
+      &Aacute;reas
     </a>
-    <a
-      href="#projects"
-      class="px-4 py-2 rounded-full text-sm font-medium transition-colors"
-      style={`color: ${siteConfig.colors.surface}`}
-    >
-      Proyectos
+    <a href="#about" class="nav-link px-3 py-1.5 rounded-full text-xs font-medium" style={`color: ${c.text}`}>
+      Sobre M&iacute;
     </a>
-    <a
-      href="#experience"
-      class="px-4 py-2 rounded-full text-sm font-medium transition-colors"
-      style={`color: ${siteConfig.colors.surface}`}
-    >
-      Experiencia
+    <a href="#testimonials" class="nav-link px-3 py-1.5 rounded-full text-xs font-medium" style={`color: ${c.text}`}>
+      Depoimentos
     </a>
-    <a
-      href="#education"
-      class="px-4 py-2 rounded-full text-sm font-medium transition-colors"
-      style={`color: ${siteConfig.colors.surface}`}
-    >
-      Educación
+    <a href="#faq" class="nav-link px-3 py-1.5 rounded-full text-xs font-medium" style={`color: ${c.text}`}>
+      FAQ
     </a>
   </nav>
 </header>
 
 <style>
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
+  .nav-link { transition: background-color 0.2s ease, color 0.2s ease; }
+  .nav-link:hover { background-color: rgba(30, 196, 168, 0.15); }
+  .nav-link.active { background-color: rgba(30, 196, 168, 0.2); }
 </style>
 
 <script>
   const nav = document.getElementById('floating-nav');
 
   window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 400) {
+    if (window.scrollY > 400) {
       nav?.classList.remove('hidden');
     } else {
       nav?.classList.add('hidden');
@@ -75,9 +56,9 @@ import { siteConfig } from "../config";
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navLinks?.forEach(link => {
-          link.style.backgroundColor = 'transparent';
+          link.classList.remove('active');
           if (link.getAttribute('href') === `#${entry.target.id}`) {
-            link.style.backgroundColor = 'rgba(201,169,110,0.2)';
+            link.classList.add('active');
           }
         });
       }

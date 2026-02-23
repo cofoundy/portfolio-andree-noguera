@@ -62,9 +62,21 @@ const c = siteConfig.colors;
       <!-- CTA Sidebar (right) -->
       <div class="lg:col-span-2 reveal-right">
         <div
-          class="rounded-xl p-6 text-center lg:text-left sticky top-24"
+          class="rounded-xl overflow-hidden text-center lg:text-left sticky top-24"
           style={`background: ${c.card}; border: 1px solid ${c.cardBorder};`}
         >
+          <!-- Photo -->
+          <picture>
+            <source srcset="/cta-photo.webp" type="image/webp" />
+            <img
+              src="/cta-photo.jpg"
+              alt={siteConfig.name}
+              class="w-full h-48 object-cover object-top"
+              loading="lazy"
+            />
+          </picture>
+
+          <div class="p-6">
           <p
             class="text-sm mb-6 leading-relaxed"
             style={`color: ${c.text};`}
@@ -97,6 +109,7 @@ const c = siteConfig.colors;
             </svg>
             Atendimiento por E-mail
           </a>
+          </div>
         </div>
       </div>
     </div>
